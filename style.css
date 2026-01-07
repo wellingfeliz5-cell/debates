@@ -1,0 +1,124 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Arial Black', sans-serif;
+    background-color: #e0e0e0; /* Fondo grisáceo para resaltar el recuadro blanco */
+    overflow: hidden;
+}
+
+/* INTERFAZ INICIAL - Recuadro Blanco */
+.setup-overlay {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setup-card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 450px;
+}
+
+.setup-card h1 { margin-bottom: 10px; font-size: 24px; color: #333; }
+.setup-card p { margin-bottom: 20px; color: #666; font-family: Arial, sans-serif; }
+
+.setup-card input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+
+.setup-card input:focus { border-color: #00ff00; }
+
+#start-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#start-btn:hover { background-color: #333; }
+
+/* INTERFAZ DE JUEGO - PANTALLA COMPLETA */
+.game-full {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: white; /* Todo blanco para la transmisión */
+    padding: 60px 20px;
+}
+
+.hidden { display: none; }
+
+.team-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vertical-divider {
+    width: 6px;
+    background-color: #000;
+    height: 85%;
+    align-self: center;
+}
+
+h2 {
+    font-size: 4.5rem;
+    color: #000;
+    text-align: center;
+}
+
+.dots-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.dot {
+    width: 95px;
+    height: 95px;
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    border: 5px solid #000;
+    cursor: pointer;
+}
+
+.dot.green { background-color: #00ff00; }
+.dot.red { background-color: #ff0000; }
+
+.score-row {
+    display: flex;
+    gap: 40px;
+}
+
+.score-box {
+    width: 180px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    font-weight: bold;
+    border-radius: 35px;
+    border: 7px solid #000;
+}
+
+.green-box { background-color: #00ff00; }
+.red-box { background-color: #ff0000; }

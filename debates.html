@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="setup-screen" class="setup-overlay">
+        <div class="setup-card">
+            <h1>Configuración</h1>
+            <p>Introduce los nombres de los equipos</p>
+            <input type="text" id="name1" placeholder="Equipo 1">
+            <input type="text" id="name2" placeholder="Equipo 2">
+            <button id="start-btn" onclick="startGame()">EMPEZAR DEBATE</button>
+        </div>
+    </div>
+
+    <div id="game-screen" class="game-full hidden">
+        <div class="team-column">
+            <h2 id="display-name1">VARONES</h2>
+            <div class="dots-grid" id="dots1"></div>
+            <div class="score-row">
+                <div class="score-box green-box" id="green-count1">0</div>
+                <div class="score-box red-box" id="red-count1">0</div>
+            </div>
+        </div>
+
+        <div class="vertical-divider"></div>
+
+        <div class="team-column">
+            <h2 id="display-name2">HEMBRAS</h2>
+            <div class="dots-grid" id="dots2"></div>
+            <div class="score-row">
+                <div class="score-box green-box" id="green-count2">0</div>
+                <div class="score-box red-box" id="red-count2">0</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
